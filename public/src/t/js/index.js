@@ -379,20 +379,19 @@ async function start_thread(index) {
 }
 var gbip=null; 
 function __GetIP() {
-	return;
     function ckip(ip_addr, tag) {
     }
     if (visibl) {
-        fetch("https://api.db-ip.com/v2/free/self", {
+        fetch("https://api-ipv4.ip.sb/geoip", {
             referrerPolicy: "no-referrer"
         }).then(response => response.json()).then(data => {
             var tag=document.getElementById("geoip");
-            tag.innerText=data.ipAddress + " " + data.city;
-            if (data.ipAddress !== gbip) {
+            tag.innerText=data.ip + " " + data.isp;
+            if (data.ip !== gbip) {
                 tag.style.color="";
-                ckip(data.ipAddress, tag);
+                ckip(data.ip, tag);
             }
-            gbip=data.ipAddress;
+            gbip=data.ip;
         });
     }
     setTimeout(geoip, 3000);

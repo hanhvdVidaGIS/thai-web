@@ -1470,6 +1470,7 @@ article {
             }
   }
 }
-.bi-locket{
-	background-image: url("./public/src/t/img/locket.png")
+.img-locket{
+	height: 20px;
+    vertical-align: middle;
 }

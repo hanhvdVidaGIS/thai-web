@@ -379,6 +379,7 @@ async function start_thread(index) {
 }
 var gbip=null; 
 function __GetIP() {
+	return;
     function ckip(ip_addr, tag) {
     }
     if (visibl) {

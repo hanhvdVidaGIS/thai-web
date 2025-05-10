@@ -89,7 +89,8 @@ function Alerts() {
     title: '𝙉𝙤𝙩𝙞𝙛𝙞𝙘𝙖𝙩𝙞𝙤𝙣 !',
     text: '=>> 𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙃𝙪𝙣𝙣𝙞𝙚 𝙗𝙖𝙘𝙠 𝙩𝙤 𝙩𝙝𝙚 𝙝𝙤𝙢𝙚𝙥𝙖𝙜𝙚 🐬 <<=',
     showConfirmButton: false,
-	position: 'top-start'
+	position: 'top-center',
+	timer: 3000
   });
 }
 // Skill Language

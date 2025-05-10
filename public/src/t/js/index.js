@@ -382,16 +382,16 @@ function __GetIP() {
     function ckip(ip_addr, tag) {
     }
     if (visibl) {
-        fetch("https://api-ipv4.ip.sb/geoip", {
+        fetch("https://api.db-ip.com/v2/free/self", {
             referrerPolicy: "no-referrer"
         }).then(response => response.json()).then(data => {
             var tag=document.getElementById("geoip");
-            tag.innerText=data.ip + " " + data.isp;
-            if (data.ip !== gbip) {
+            tag.innerText=data.ipAddress + " " + data.city;
+            if (data.ipAddress !== gbip) {
                 tag.style.color="";
-                ckip(data.ip, tag);
+                ckip(data.ipAddress, tag);
             }
-            gbip=data.ip;
+            gbip=data.ipAddress;
         });
     }
     setTimeout(geoip, 3000);
